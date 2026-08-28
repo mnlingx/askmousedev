@@ -155,7 +155,21 @@ export default function App() {
         .emo-btn { transition: transform 0.15s ease, background 0.15s ease; }
         .emo-btn:hover { transform: translateY(-3px); }
         .emo-btn:active { transform: translateY(0) scale(0.95); }
-        .roll-btn:active { transform: scale(0.97); }
+        .roll-label {
+          transition: color 0.2s ease, gap 0.2s ease, opacity 0.2s ease;
+        }
+        .roll-label:not([aria-disabled="true"]):hover {
+          color: #F2C14E;
+          gap: 12px;
+        }
+        .roll-label:not([aria-disabled="true"]):focus-visible {
+          outline: 2px solid #F2C14E;
+          outline-offset: 6px;
+          border-radius: 4px;
+        }
+        .roll-label:not([aria-disabled="true"]):active {
+          transform: translateY(1px);
+        }
       `}</style>
 
       <div style={styles.frame}>
@@ -192,14 +206,23 @@ export default function App() {
           </div>
         </div>
 
-        <button
+        <span
+          role="button"
+          tabIndex={rolling ? -1 : 0}
           onClick={roll}
-          disabled={rolling}
-          className="roll-btn"
-          style={{ ...styles.rollBtn, opacity: rolling ? 0.6 : 1 }}
+          onKeyDown={(event) => {
+            if (!rolling && (event.key === "Enter" || event.key === " ")) {
+              event.preventDefault();
+              roll();
+            }
+          }}
+          aria-disabled={rolling}
+          aria-label="Roll for an answer"
+          className="roll-label"
+          style={{ ...styles.rollLabel, opacity: rolling ? 0.6 : 1 }}
         >
-          roll
-        </button>
+          <span>roll</span>
+        </span>
 
         <div style={styles.emoRow}>
           {EMOTIONS.map((e) => {
@@ -331,18 +354,22 @@ const styles = {
     color: "#5A4A80",
     margin: 0,
   },
-  rollBtn: {
+  rollLabel: {
     marginTop: "28px",
-    background: "#F2C14E",
-    color: "#1B1230",
+    background: "transparent",
+    color: "#F5F0FF",
     border: "none",
-    borderRadius: "999px",
-    padding: "14px 48px",
+    borderBottom: "1px solid #4A3A72",
+    borderRadius: 0,
+    padding: "8px 0 6px",
+    display: "flex",
+    alignItems: "center",
+    gap: "8px",
     fontFamily: "'Quicksand', sans-serif",
     fontWeight: 700,
-    fontSize: "16px",
+    fontSize: "14px",
     letterSpacing: "0.06em",
-    textTransform: "lowercase",
+    textTransform: "uppercase",
     cursor: "pointer",
   },
   emoRow: {
