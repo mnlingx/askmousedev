@@ -1,16 +1,39 @@
-# React + Vite
+# askmouse
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+askmouse is a tiny, playful fortune-teller. Think of a yes-or-no question, choose a feeling if you like, and roll to hear what the mouse says. Each roll takes a moment, then reveals one of several randomized responses.
 
-Currently, two official plugins are available:
+## How It Works
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Choose one of the five feelings to nudge the chance of a yes. Leave them all unselected for an even 50/50 roll.
 
-## React Compiler
+| Feeling | Chance of yes |
+| --- | ---: |
+| Happy | 80% |
+| Sad | 35% |
+| Angry | 25% |
+| Embarrassed | 40% |
+| Scared | 20% |
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The answer is generated in your browser; the app does not send your question anywhere. The result is for fun, not advice.
 
-## Expanding the ESLint configuration
+## Run Locally
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Requires Node.js and npm.
+
+```sh
+npm install
+npm run dev
+```
+
+Vite prints the local development URL in the terminal. To create and preview a production build:
+
+```sh
+npm run build
+npm run preview
+```
+
+Run the linter with `npm run lint`.
+
+## Built With
+
+React and Vite.
