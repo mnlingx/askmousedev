@@ -178,6 +178,8 @@ export default function App() {
         <div
           style={{
             ...styles.orb,
+            cursor: rolling ? "default" : "pointer",
+            touchAction: "manipulation",
             boxShadow:
               resultType === "yes"
                 ? "0 0 0 3px #6FCF97 inset"
@@ -185,6 +187,17 @@ export default function App() {
                 ? "0 0 0 3px #E8836B inset"
                 : "0 0 0 3px rgba(242,193,78,0.35) inset",
           }}
+          role="button"
+          tabIndex={rolling ? -1 : 0}
+          onClick={roll}
+          onKeyDown={(event) => {
+            if (!rolling && (event.key === "Enter" || event.key === " ")) {
+              event.preventDefault();
+              roll();
+            }
+          }}
+          aria-disabled={rolling}
+          aria-label="Roll for an answer"
         >
           <div style={styles.crater1} />
           <div style={styles.crater2} />

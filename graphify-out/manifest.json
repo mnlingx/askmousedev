@@ -1,0 +1,80 @@
+{
+  "eslint.config.js": {
+    "mtime": 1787926742.5795496,
+    "seen": 1794046489.6400661,
+    "ast_hash": "3aa4b57d7f08181d86bde52a4dcb7f22",
+    "semantic_hash": "3aa4b57d7f08181d86bde52a4dcb7f22"
+  },
+  "package.json": {
+    "mtime": 1787926742.5806074,
+    "seen": 1794046489.640069,
+    "ast_hash": "24bf81949bbca54fdbfb28449c8c75c1",
+    "semantic_hash": "24bf81949bbca54fdbfb28449c8c75c1"
+  },
+  "src/App.jsx": {
+    "mtime": 1794046425.4930403,
+    "seen": 1794046489.640071,
+    "ast_hash": "eda432c8103d9b2f77da93f6efe883c8",
+    "semantic_hash": "eda432c8103d9b2f77da93f6efe883c8"
+  },
+  "src/App_.jsx": {
+    "mtime": 1787926742.5743353,
+    "seen": 1794046489.640071,
+    "ast_hash": "0b6326cb08b367ad5afe2f7e7a8ab722",
+    "semantic_hash": "0b6326cb08b367ad5afe2f7e7a8ab722"
+  },
+  "src/main.jsx": {
+    "mtime": 1787926742.5765593,
+    "seen": 1794046489.6400719,
+    "ast_hash": "e13723e2574429d9a6d849727e3ff695",
+    "semantic_hash": "e13723e2574429d9a6d849727e3ff695"
+  },
+  "vite.config.js": {
+    "mtime": 1787926742.5777683,
+    "seen": 1794046489.6400719,
+    "ast_hash": "5d54447744c19ccd28638a5c668d15ea",
+    "semantic_hash": "5d54447744c19ccd28638a5c668d15ea"
+  },
+  "ARCHITECTURE_askmouse.md": {
+    "mtime": 1792239150.4553316,
+    "seen": 1794046489.640073,
+    "ast_hash": "b45fa56ac10224b226a6f1f464872e46",
+    "semantic_hash": "b45fa56ac10224b226a6f1f464872e46"
+  },
+  "README.md": {
+    "mtime": 1792071608.8912992,
+    "seen": 1794046489.640074,
+    "ast_hash": "ae16c0fe44cb6645899c1aac9bd6e4d7",
+    "semantic_hash": "ae16c0fe44cb6645899c1aac9bd6e4d7"
+  },
+  "index.html": {
+    "mtime": 1787926742.5720823,
+    "seen": 1794046489.640074,
+    "ast_hash": "ec8547244844314b676f3c63ed52633c",
+    "semantic_hash": "ec8547244844314b676f3c63ed52633c"
+  },
+  "public/favicon.svg": {
+    "mtime": 1787926742.5727432,
+    "seen": 1794046489.640075,
+    "ast_hash": "7e840862161341271697daa99a40d76b",
+    "semantic_hash": "7e840862161341271697daa99a40d76b"
+  },
+  "public/icons.svg": {
+    "mtime": 1787926742.573323,
+    "seen": 1794046489.640075,
+    "ast_hash": "3b4fcfcf393eca4d264dca4a4663bc37",
+    "semantic_hash": "3b4fcfcf393eca4d264dca4a4663bc37"
+  },
+  "src/assets/react.svg": {
+    "mtime": 1787926742.5753734,
+    "seen": 1794046489.640076,
+    "ast_hash": "f0402b67b6ce880f65666bb49e841696",
+    "semantic_hash": "f0402b67b6ce880f65666bb49e841696"
+  },
+  "src/assets/vite.svg": {
+    "mtime": 1787926742.5757897,
+    "seen": 1794046489.640076,
+    "ast_hash": "9960a24288958394ac50e57ff638b036",
+    "semantic_hash": "9960a24288958394ac50e57ff638b036"
+  }
+}
