@@ -272,18 +272,19 @@ export default function App() {
 
 const styles = {
   page: {
-    minHeight: "100vh",
+    minHeight: "100dvh",
     width: "100%",
+    boxSizing: "border-box",
     background: "#000000",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    padding: "32px 16px",
+    padding: "clamp(20px, 5vh, 40px) max(16px, env(safe-area-inset-right)) clamp(20px, 5vh, 40px) max(16px, env(safe-area-inset-left))",
     fontFamily: "'Quicksand', sans-serif",
   },
   frame: {
     width: "100%",
-    maxWidth: "360px",
+    maxWidth: "min(360px, 100%)",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
@@ -297,8 +298,8 @@ const styles = {
   },
   orb: {
     position: "relative",
-    width: "240px",
-    height: "240px",
+    width: "clamp(200px, 68vw, 240px)",
+    height: "clamp(200px, 68vw, 240px)",
     borderRadius: "50%",
     background: "radial-gradient(circle at 35% 30%, #3A2A5C, #251840)",
     display: "flex",
@@ -387,12 +388,15 @@ const styles = {
   },
   emoRow: {
     display: "flex",
-    gap: "10px",
+    width: "100%",
+    justifyContent: "center",
+    flexWrap: "wrap",
+    gap: "clamp(6px, 2.5vw, 10px)",
     marginTop: "30px",
   },
   emoBtn: {
-    width: "48px",
-    height: "48px",
+    width: "clamp(40px, 13vw, 48px)",
+    height: "clamp(40px, 13vw, 48px)",
     borderRadius: "50%",
     border: "2px solid #4A3A72",
     cursor: "pointer",
